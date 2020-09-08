@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Mad Libs</h1>
+    <script>
+        let adjective1 = prompt("Name an adjective");
+        let noun1 = prompt('Name a noun');
+        let adverb1 = prompt('Name an adverb');
+        let noun2 = prompt('Name a noun');
+        let pastTenseVerb = prompt('Name a verb ending in "ed"');
+        let presentPerfectVerb = prompt('Name a verb ending in "ing"');
+
+        document.body.innerHTML += 
+        "Story: <br>";
+
+        document.body.innerHTML +=
+        'The ' + 
+        adjective1 + ' ' + 
+        noun1 + ' casually drove through the town until it came upon a ' +
+        noun2 + '. ' + 
+        adverb1 + ', the ' + 
+        noun1 + ' ' + 
+        pastTenseVerb + ' into the ' + 
+        noun2 + ', ' + 
+        presentPerfectVerb + ' it thoroughly.';
+    </script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+        .container{
+            top: 200px;
+            margin-left: auto;
+            margin-right: auto;
+            box-sizing: border-box;
+            position: relative;
+            min-width: 300px;
+            max-width: 800px;
+            width: 90%;
+            text-align: center;
+            padding: 10px;
+            border: 1px solid black;
+            border-radius: 10px;
+            background-image: linear-gradient(gray, white, white, white, gray);
+            box-shadow: 10px 5px 15px 3px gray;
+        }
+
+        .flexbox{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+            padding: 5px;
+        }
+
+        h1{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 350%;
+            font-weight: bolder;
+            text-shadow: 2px 1px lightgray;
+        }
+
+        button{
+            width: 75px;
+            height: 50px;
+            flex-grow: 1;
+            max-width: 200px;
+            padding: 10px;
+            font-size: 20px;
+            font-weight: bolder;
+            border: 3px solid gray;
+            border-radius: 10px;
+            background-image: linear-gradient(black, white, black);
+        }
+
+        #minus{
+            float: left;
+        }
+
+        #plus{
+            float: right;
+        }
+
+        #count{
+            width: 50px;
+            height: 50px;
+            padding: 10px;
+            margin: 10px;
+            font-size: 40px;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+    <div class="container"><h1>SIMPLE COUNTER</h1>
+    <div class="flexbox"><button id="minus">-</button>
+    <span id="count"></span>
+    <button id="plus">+</button>
+    </div>
+    </div>
+    <script>
+        let plus = document.querySelector('#plus');
+        let minus = document.querySelector('#minus');
+        let count = Number(prompt('Gimme a number!'));
+        let counter = document.body.querySelector('#count');
+        document.body.querySelector('#count').innerHTML = count;
+
+        plus.addEventListener("click", function() {
+            count += 1;
+            console.log("+1");
+            counter.innerHTML = count;
+            if(count >= 0){
+            counter.style.color = "black";
+        }
+            if(count === 0){
+            alert('Back in black!')
+            }
+        })
+
+        minus.addEventListener("click", function() {
+            count -= 1;
+            console.log("-1");
+            counter.innerHTML = count;
+            if(count < 0){
+            counter.style.color = "red";
+        }
+            if(count === -1){
+            alert('Value less than 0!')
+            }
+        })
+        
+    </script>
+</body>
+</html>
